@@ -1,0 +1,28 @@
+{
+  "name": "link-marker",
+  "version": "1.0.1",
+  "description": "a chrome extension for mark links you visited",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Test",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "content_scripts/main.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "manifest_version": 2
+}
